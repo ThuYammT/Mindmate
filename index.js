@@ -6,6 +6,9 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 
+// Serve static files from the "public" folder
+app.use(express.static('public'));
+
 const meditations = [
   {
     id: 1,
@@ -230,20 +233,27 @@ const meditations = [
 
 ];
 
-app.get('/api/meditations', (req, res) => {
-  res.json(meditations);
-});
-
-app.get('/api/meditations/:id', (req, res) => {
-  const id = parseInt(req.params.id);
-  const meditation = meditations.find(m => m.id === id);
-  if (meditation) {
-    res.json(meditation);
-  } else {
-    res.status(404).json({ message: 'Meditation not found' });
-  }
-});
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// Root route
+app.get('/', (req, res) => {
+   res.send('Welcome to the Meditation API! Visit /api/meditations to get started.');
+ });
+ 
+ // Get all meditations
+ app.get('/api/meditations', (req, res) => {
+   res.json(meditations);
+ });
+ 
+ // Get a specific meditation by ID
+ app.get('/api/meditations/:id', (req, res) => {
+   const id = parseInt(req.params.id);
+   const meditation = meditations.find(m => m.id === id);
+   if (meditation) {
+     res.json(meditation);
+   } else {
+     res.status(404).json({ message: 'Meditation not found' });
+   }
+ });
+ 
+ app.listen(port, () => {
+   console.log(`Server is running on port ${port}`);
+ });
