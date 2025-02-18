@@ -7,7 +7,9 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 
 // Serve static files from the "public" folder
-app.use(express.static('public'));
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 const meditations = [
   {
