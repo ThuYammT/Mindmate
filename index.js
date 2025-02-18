@@ -60,8 +60,8 @@ const meditations = [
     Take a moment to notice the sounds around you, how your body feels, and the thoughts or emotions that may be present.
     Decide how you'd like to continue your day, transitioning from this moment of mindfulness into your next activity.
     `,
-    image: "http://localhost:3000/images/mindfulness_meditation.png",
-    audio: "http://localhost:3000/audio/mindfulness_meditation.mp3"
+    image: "/images/mindfulness_meditation.png", // Updated URL
+    audio: "/audio/mindfulness_meditation.mp3"  // Updated URL
   },
   {
     id: 2,
@@ -101,8 +101,8 @@ const meditations = [
    When the session is complete, bow gently to honor your practice.
    Slowly rise and transition mindfully into your next activity.
     `,
-    image: "http://localhost:3000/images/Zen_Meditation.png",
-    audio: "http://localhost:3000/audio/Zen_Meditation.mp3"
+    image: "/images/Zen_Meditation.png", // Updated URL
+    audio: "/audio/Zen_Meditation.mp3"  // Updated URL
   },
   {
     id: 3,
@@ -134,8 +134,8 @@ const meditations = [
    Slowly bring your awareness back to your body and surroundings.
    Open your eyes and take a moment to transition mindfully.
     `,
-    image: "http://localhost:3000/images/Mantra_Meditation.png",
-    audio: "http://localhost:3000/audio/Mantra_Meditation.mp3"
+    image: "/images/Mantra_Meditation.png", // Updated URL
+    audio: "/audio/Mantra_Meditation.mp3"  // Updated URL
   },
   {
     id: 4,
@@ -167,8 +167,8 @@ const meditations = [
    Gently wiggle your fingers and toes.
    Slowly open your eyes and transition back to awareness.
     `,
-    image: "http://localhost:3000/images/Yoga_Meditation.png",
-    audio: "http://localhost:3000/audio/Yoga_Meditation.mp3"
+    image: "/images/Yoga_Meditation.png", // Updated URL
+    audio: "/audio/Yoga_Meditation.mp3"  // Updated URL
   },
   {
     id: 5,
@@ -194,8 +194,8 @@ const meditations = [
    Slowly stop repeating the mantra.
    Sit quietly for a few moments, then open your eyes and transition mindfully.
     `,
-    image: "http://localhost:3000/images/Transcendental_Meditation.png",
-    audio: "http://localhost:3000/audio/Transcendental_Meditation.mp3"
+    image: "/images/Transcendental_Meditation.png", // Updated URL
+    audio: "/audio/Transcendental_Meditation.mp3"  // Updated URL
   },
   {
     id: 6,
@@ -227,33 +227,32 @@ const meditations = [
    Take a few deep breaths, then slowly open your eyes.
    Carry this sense of balance with you as you transition into your day.
     `,
-    image: "http://localhost:3000/images/Chakra_Meditation.png",
-    audio: "http://localhost:3000/audio/Chakra_Meditation.mp3"
+    image: "/images/Chakra_Meditation.png", // Updated URL
+    audio: "/audio/Chakra_Meditation.mp3"  // Updated URL
   }
-
 ];
 
 // Root route
 app.get('/', (req, res) => {
-   res.send('Welcome to the Meditation API! Visit /api/meditations to get started.');
- });
- 
- // Get all meditations
- app.get('/api/meditations', (req, res) => {
-   res.json(meditations);
- });
- 
- // Get a specific meditation by ID
- app.get('/api/meditations/:id', (req, res) => {
-   const id = parseInt(req.params.id);
-   const meditation = meditations.find(m => m.id === id);
-   if (meditation) {
-     res.json(meditation);
-   } else {
-     res.status(404).json({ message: 'Meditation not found' });
-   }
- });
- 
- app.listen(port, () => {
-   console.log(`Server is running on port ${port}`);
- });
+  res.send('Welcome to the Meditation API! Visit /api/meditations to get started.');
+});
+
+// Get all meditations
+app.get('/api/meditations', (req, res) => {
+  res.json(meditations);
+});
+
+// Get a specific meditation by ID
+app.get('/api/meditations/:id', (req, res) => {
+  const id = parseInt(req.params.id);
+  const meditation = meditations.find(m => m.id === id);
+  if (meditation) {
+    res.json(meditation);
+  } else {
+    res.status(404).json({ message: 'Meditation not found' });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
