@@ -60,8 +60,8 @@ const meditations = [
     Take a moment to notice the sounds around you, how your body feels, and the thoughts or emotions that may be present.
     Decide how you'd like to continue your day, transitioning from this moment of mindfulness into your next activity.
     `,
-    image: "/images/mindfulness_meditation.png", // Updated URL
-    audio: "/audio/mindfulness_meditation.mp3"  // Updated URL
+    image: "/static/images/mindfulness_meditation.png", // Updated URL
+    audio: "/static/audio/mindfulness_meditation.mp3"  // Updated URL
   },
   {
     id: 2,
@@ -101,8 +101,8 @@ const meditations = [
    When the session is complete, bow gently to honor your practice.
    Slowly rise and transition mindfully into your next activity.
     `,
-    image: "/images/Zen_Meditation.png", // Updated URL
-    audio: "/audio/Zen_Meditation.mp3"  // Updated URL
+    image: "/static/images/Zen_Meditation.png", // Updated URL
+    audio: "/static/audio/Zen_Meditation.mp3"  // Updated URL
   },
   {
     id: 3,
@@ -134,8 +134,8 @@ const meditations = [
    Slowly bring your awareness back to your body and surroundings.
    Open your eyes and take a moment to transition mindfully.
     `,
-    image: "/images/Mantra_Meditation.png", // Updated URL
-    audio: "/audio/Mantra_Meditation.mp3"  // Updated URL
+    image: "/static/images/Mantra_Meditation.png", // Updated URL
+    audio: "/static/audio/Mantra_Meditation.mp3"  // Updated URL
   },
   {
     id: 4,
@@ -167,8 +167,8 @@ const meditations = [
    Gently wiggle your fingers and toes.
    Slowly open your eyes and transition back to awareness.
     `,
-    image: "/images/Yoga_Meditation.png", // Updated URL
-    audio: "/audio/Yoga_Meditation.mp3"  // Updated URL
+    image: "/static/images/Yoga_Meditation.png", // Updated URL
+    audio: "/static/audio/Yoga_Meditation.mp3"  // Updated URL
   },
   {
     id: 5,
@@ -194,8 +194,8 @@ const meditations = [
    Slowly stop repeating the mantra.
    Sit quietly for a few moments, then open your eyes and transition mindfully.
     `,
-    image: "/images/Transcendental_Meditation.png", // Updated URL
-    audio: "/audio/Transcendental_Meditation.mp3"  // Updated URL
+    image: "/static/images/Transcendental_Meditation.png", // Updated URL
+    audio: "/static/audio/Transcendental_Meditation.mp3"  // Updated URL
   },
   {
     id: 6,
@@ -227,8 +227,8 @@ const meditations = [
    Take a few deep breaths, then slowly open your eyes.
    Carry this sense of balance with you as you transition into your day.
     `,
-    image: "/images/Chakra_Meditation.png", // Updated URL
-    audio: "/audio/Chakra_Meditation.mp3"  // Updated URL
+    image: "/static/images/Chakra_Meditation.png", // Updated URL
+    audio: "/static/audio/Chakra_Meditation.mp3"  // Updated URL
   }
 ];
 
